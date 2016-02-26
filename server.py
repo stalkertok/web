@@ -7,8 +7,9 @@ port = 2222
 class EchoHandler(asyncore.dispatcher_with_send):                                                        
         def handle_read(self):                                                                            
                 data = self.recv(1024)                                                                    
-                if data == 'close':                                                                                  
-                        self.send(data)                                                                  
+                if data == 'close': 
+                        break                                                                                 
+                self.send(data)                                                                  
                                                                                                          
 class EchoServer(asyncore.dispatcher):                                                                    
                                                                                                          
@@ -25,6 +26,3 @@ class EchoServer(asyncore.dispatcher):
                         sock, addr = pair                                                                
                         print 'conn', addr                                                                
                         handler = EchoHandler(sock)                                                      
-                                                                                                         
-server = EchoServer(host, port)                                                                          
-asyncore.loop()  
