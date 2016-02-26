@@ -8,7 +8,7 @@ class EchoHandler(asyncore.dispatcher_with_send):
         def handle_read(self):                                                                            
                 data = self.recv(1024)                                                                    
                 if data == 'close': 
-                   self.close                                                                               
+                   self.close()                                                                               
                 self.send(data)                                                                  
                                                                                                          
 class EchoServer(asyncore.dispatcher):                                                                    
