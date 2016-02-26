@@ -25,4 +25,7 @@ class EchoServer(asyncore.dispatcher):
                 if pair is not None:                                                                      
                         sock, addr = pair                                                                
                         print 'conn', addr                                                                
-                        handler = EchoHandler(sock)                                                      
+                        handler = EchoHandler(sock) 
+
+server = EchoServer(host, port)                                                                          
+asyncore.loop()                                                       
