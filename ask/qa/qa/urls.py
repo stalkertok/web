@@ -17,11 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 admin.autodiscover()
 urlpatterns = ['qa.views',
-url('r^$','test'),
-url('r^login/.*$','test'),
-url('r^signup/.*$','test'),
-url('r^quetion/\d+/$','test'),
-url('r^ask/.*$','test'),
-url('r^popular/.*$','test'),
-url('r^news/.*$','test'),
+url(r'^$','test'),
+url(r'^login/.*$','test'),
+url(r'^signup/.*$','test'),
+url(r'^quetion/\d+/$','test'),
+url(r'^ask/.*$','test'),
+url(r'^popular/.*$','test'),
+url(r'^news/.*$','test'),
 ]
