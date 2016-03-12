@@ -1,4 +1,4 @@
-"""qa URL Configuration
+"""ask URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -15,13 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-admin.autodiscover()
-urlpatterns = ['qa.views',
-url('r^$','test'),
-url('r^login/.*$','test'),
-url('r^signup/.*$','test'),
-url('r^quetion/\d+/$','test'),
-url('r^ask/.*$','test'),
-url('r^popular/.*$','test'),
-url('r^news/.*$','test'),
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
 ]
